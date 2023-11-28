@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editora LeNabi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="comentarios.js"></script> -->
+
+    <script src="https://kit.fontawesome.com/a2288264db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="img-interface/lenabi 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="produto.css">
+    <script src="user.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container-fundo">
+            <div class="container">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="img-interface/lenabi 1.png" alt="borboleta voando dentro de um livro">
+                        <h2>LeNabi</h2>
+                    </div>
+                </a>
+                <div class="buscar">
+                    <input type="text" id="buscar" placeholder="Buscar livro" oninput="buscarProduto()">
+                </div>
+
+                <div id="favoritos" onclick="toggleFavoritos()">
+                    <div class="imagem">
+                        <i class="fa-regular fa-heart" style="color: #522318; "></i>
+                    </div>
+                    <span id="cont-favoritos">0</span>
+                </div>
+                <div id="carrinho-itens" style="display: none;">
+                    <ul id="itens-lista"></ul>
+                    <span id="preco-total">Valor Total: R$0,00</span>
+                    <button class="car" onclick="limparCarrinho()">Limpar Carrinho</button>
+                </div>
+                <!-- Dentro da div do usuário logado -->
+                <div class="usuario-logado" id="userHeader" onclick="mostrarOcultarPopup()">
+                    <i class="fa-solid fa-user" style="color: #522318;"></i>
+                    <span id="nomeUsuario"></span>
+                </div>
+                <div id="popup" style="display: none;">
+                    <div class="popup-conteudo">
+                        <img src="img-interface/Group 20.svg" alt="">
+                        <span id="conteudoPopup"></span>
+                        <span id="emailUsuario"></span>
+                        <br>
+
+                    </div>
+                    <button class="botaoSair" onclick="logout()">
+                        <p>Sair</p>
+                        <i id="logoutButton" class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="button" id="loginButton"><span>Fazer login</span></a>
+            </div>
+        </div>
+
+        <nav>
+            <div class="botoes">
+                <a href="produto.html#pre-venda" id="prevenda">Pré-Venda</a>
+                <a href="produto.html#lancamentos-page" id="lanca">Lançamentos</a>
+                <a href="produto.html" id="produ">Produtos</a>
+                <a href="sustentabilidade.html" id="susten">Sustentabilidade</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main id="sobre-nos">
+
+        <div id="idiomas">
+            <button class="esc" onclick="Escolher('ptbr')"><img class="bandeira"
+                    src="img-interface/bandeira-do-brasil 2.jpg" alt=""></button>
+            <button class="esc" onclick="Escolher('en')"><img class="bandeira"
+                    src="img-interface/bandeira-estados-unidos 2.png" alt=""></button>
+            <button class="esc" onclick="Escolher('es')"><img class="bandeira"
+                    src="img-interface/bandeira-da-espanha 2.png" alt=""></button>
+        </div>
+
+        <section>
+            <div class="container-sobreNos">
+                <div class="titulo-sobre">
+                    <img src="img-interface/Group_17-removebg-preview.png" alt="">
+                    <div class="descubra-sobre">
+                        <h2 class="titulo1" id="descubra">descubra mais</h2>
+                        <h2 class="titulo2" id="sobre">sobre nós!</h2>
+                    </div>
+                </div>
+                <div class="line-sobre"></div>
+                <div class="nossaHistoria">
+                    <h3 id="nossahistoria">Nossa história</h3>
+                    <p>O projeto "LeNabi" surge como uma iniciativa inovadora desenvolvida por estudantes do segundo
+                        semestre do curso técnico de desenvolvimento de sistemas. Com uma proposta única, o website
+                        busca refletir a identidade da livraria "LeNabi", conhecida por seu compromisso com a
+                        sustentabilidade e o amor pela literatura. Inspirados pela filosofia ecológica da livraria, os
+                        estudantes optaram por um design mais retrô, alinhando-se à estética das folhas sustentáveis que
+                        a "LeNabi" promove.</p>
+
+                    <p>O layout do website foi cuidadosamente planejado para transmitir a atmosfera acolhedora da
+                        livraria física, integrando elementos nostálgicos que remetem a épocas passadas. A paleta de
+                        cores escolhida reflete a natureza, com tons terrosos e verdes, enfatizando o compromisso
+                        ambiental da "LeNabi". Além disso, a interface do usuário foi projetada de forma intuitiva,
+                        proporcionando uma experiência de navegação fluida e agradável.</p>
+                </div>
+                <div class="line-sobre"></div>
+                <div class="nossaHistoria">
+                    <h3>Nossa história</h3>
+                    <p>No desenvolvimento técnico, foram aplicados conhecimentos adquiridos durante o curso para criar
+                        um website responsivo e funcional. Foram integradas tecnologias modernas para garantir a
+                        segurança dos dados dos usuários e a eficiência nas transações online. Além disso, foram
+                        incorporados elementos interativos, como animações e transições suaves, para enriquecer a
+                        experiência do usuário.</p>
+
+                    <p>A seção de produtos do website "LeNabi" apresenta uma seleção cuidadosa de livros sustentáveis,
+                        destacando obras que promovem a conscientização ambiental e o respeito pela natureza. Cada
+                        detalhe foi pensado para transmitir a mensagem da livraria e atrair um público engajado com
+                        valores similares.</p>
+
+                    <p>Finalmente, o website "LeNabi" não apenas reflete o talento e a habilidade aplicados pelos
+                        estudantes do segundo semestre do curso técnico de desenvolvimento de sistemas, mas também
+                        representa uma colaboração bem-sucedida entre tecnologia e sustentabilidade, proporcionando uma
+                        plataforma online única para aqueles comprometidos com um estilo de vida mais ecológico.</p>
+                </div>
+                <div class="line-sobre"></div>
+                <div class="frase-sobre">
+                    <img src="img-interface/Group 17 (1).png" alt="">
+                    <p>Junte-se a nós nessa jornada literária e sustentável e seja parte da nossa história!</p>
+                </div>
+                <div class="line-sobre"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var botaoLogin = document.getElementById('botaoLogin');
+        botaoLogin.innerText = texto.botaoLogin;
+        // Adiciona estilos ao hover do botão
+        botaoLogin.addEventListener('mouseover', function () {
+            botaoLogin.style.color = '#F8F1EE';
+            botaoLogin.style.backgroundColor = '#3C2520';
+        });
+        botaoLogin.addEventListener('mouseout', function () {
+            botaoLogin.style.backgroundColor = '#B99B8D';
+            botaoLogin.style.color = '#3C2520' //
+        })
+        // Remove a classe que estiliza o botão
+        botaoLogin.classList.remove('button');
+
+        function Escolher(idioma) {
+            fetch(`textos_${idioma}.json`)
+                .then(resposta => resposta.json())
+                .then(texto => {
+                    document.getElementById('buscar').placeholder = texto.buscar;
+                    document.getElementById('botaoLogin').innerText = texto.botaoLogin;
+                    
+                    document.querySelector('#descubra').textContent = texto.descubra;
+                    document.querySelector('#sobre').textContent = texto.sobre;
+
+                    document.querySelector('#prevenda').textContent = texto.prevenda;
+                    document.querySelector('#lanca').textContent = texto.lanca;
+                    document.querySelector('#produ').textContent = texto.produ;
+                    document.querySelector('#susten').textContent = texto.susten;
+                    document.querySelector('#nossahistoria').textContent = texto.nossahistoria;
+                })
+                .catch(error => console.error('Erro buscando textos:', error));
+        }
+    </script>
+
+</body>
+
+</html>
