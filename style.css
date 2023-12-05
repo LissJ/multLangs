@@ -500,16 +500,18 @@ img {
 }
 
 #idiomas{
+    margin-top: -60px;
     position: fixed;
-    margin-left: 1400px;
+    margin-left: 1440px;
     display: flex;
     flex-direction: column;
 }
 
 .bandeira{
+    margin-top: 15px;
     border-radius: 10px;
     cursor: pointer;
-    width: 70px;
+    width: 50px;
 }
 
 /* footer */
