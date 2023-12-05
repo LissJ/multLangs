@@ -100,34 +100,34 @@
                 <div class="line-sobre"></div>
                 <div class="nossaHistoria">
                     <h3 id="nossahistoria">Nossa história</h3>
-                    <p>O projeto "LeNabi" surge como uma iniciativa inovadora desenvolvida por estudantes do segundo
+                    <p id="para1">O projeto LeNabi surge como uma iniciativa inovadora desenvolvida por estudantes do segundo
                         semestre do curso técnico de desenvolvimento de sistemas. Com uma proposta única, o website
-                        busca refletir a identidade da livraria "LeNabi", conhecida por seu compromisso com a
+                        busca refletir a identidade da livraria LeNabi, conhecida por seu compromisso com a
                         sustentabilidade e o amor pela literatura. Inspirados pela filosofia ecológica da livraria, os
                         estudantes optaram por um design mais retrô, alinhando-se à estética das folhas sustentáveis que
-                        a "LeNabi" promove.</p>
+                        a LeNabi promove.</p>
 
-                    <p>O layout do website foi cuidadosamente planejado para transmitir a atmosfera acolhedora da
+                    <p id="para2">O layout do website foi cuidadosamente planejado para transmitir a atmosfera acolhedora da
                         livraria física, integrando elementos nostálgicos que remetem a épocas passadas. A paleta de
                         cores escolhida reflete a natureza, com tons terrosos e verdes, enfatizando o compromisso
-                        ambiental da "LeNabi". Além disso, a interface do usuário foi projetada de forma intuitiva,
+                        ambiental da LeNabi. Além disso, a interface do usuário foi projetada de forma intuitiva,
                         proporcionando uma experiência de navegação fluida e agradável.</p>
                 </div>
                 <div class="line-sobre"></div>
                 <div class="nossaHistoria">
-                    <h3>Nossa história</h3>
-                    <p>No desenvolvimento técnico, foram aplicados conhecimentos adquiridos durante o curso para criar
+                    <h3 id="nossosite">Nosso site</h3>
+                    <p id="para3">No desenvolvimento técnico, foram aplicados conhecimentos adquiridos durante o curso para criar
                         um website responsivo e funcional. Foram integradas tecnologias modernas para garantir a
                         segurança dos dados dos usuários e a eficiência nas transações online. Além disso, foram
                         incorporados elementos interativos, como animações e transições suaves, para enriquecer a
                         experiência do usuário.</p>
 
-                    <p>A seção de produtos do website "LeNabi" apresenta uma seleção cuidadosa de livros sustentáveis,
+                    <p id="para4">A seção de produtos do website LeNabi apresenta uma seleção cuidadosa de livros sustentáveis,
                         destacando obras que promovem a conscientização ambiental e o respeito pela natureza. Cada
                         detalhe foi pensado para transmitir a mensagem da livraria e atrair um público engajado com
                         valores similares.</p>
 
-                    <p>Finalmente, o website "LeNabi" não apenas reflete o talento e a habilidade aplicados pelos
+                    <p id="para5">Finalmente, o website LeNabi não apenas reflete o talento e a habilidade aplicados pelos
                         estudantes do segundo semestre do curso técnico de desenvolvimento de sistemas, mas também
                         representa uma colaboração bem-sucedida entre tecnologia e sustentabilidade, proporcionando uma
                         plataforma online única para aqueles comprometidos com um estilo de vida mais ecológico.</p>
@@ -135,12 +135,27 @@
                 <div class="line-sobre"></div>
                 <div class="frase-sobre">
                     <img src="img-interface/Group 17 (1).png" alt="">
-                    <p>Junte-se a nós nessa jornada literária e sustentável e seja parte da nossa história!</p>
+                    <p id="junte">Junte-se a nós nessa jornada literária e sustentável e seja parte da nossa história!</p>
                 </div>
                 <div class="line-sobre"></div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="final">
+            <div class="logo">
+                <div class="nome-final">
+                    <h1 class="lele">
+                        LeNabi
+                    </h1>
+                    <h1 id="voe" class="dois">
+                        Voe entre as páginas!
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         var botaoLogin = document.getElementById('botaoLogin');
@@ -172,6 +187,15 @@
                     document.querySelector('#produ').textContent = texto.produ;
                     document.querySelector('#susten').textContent = texto.susten;
                     document.querySelector('#nossahistoria').textContent = texto.nossahistoria;
+                    document.querySelector('#para1').textContent = texto.para1;
+                    document.querySelector('#para2').textContent = texto.para2;
+                    document.querySelector('#nossosite').textContent = texto.nossosite;
+                    document.querySelector('#para3').textContent = texto.para3;
+                    document.querySelector('#para4').textContent = texto.para4;
+                    document.querySelector('#para5').textContent = texto.para5;
+                    document.querySelector('#junte').textContent = texto.junte;
+                    document.querySelector('#voe').textContent = texto.voe;
+                    
                 })
                 .catch(error => console.error('Erro buscando textos:', error));
         }

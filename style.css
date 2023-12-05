@@ -425,6 +425,7 @@ img {
 .titulo1 {
     font-family: 'Poppins-bold';
     font-size: 35px;
+    text-align: center;
     position: relative;
     top: 20px;
 }
@@ -510,3 +511,31 @@ img {
     cursor: pointer;
     width: 70px;
 }
+
+/* footer */
+.final{
+    background-color: #3C2520;
+}
+
+.nome-final{
+    display: flex;
+    margin-left: 200px;
+}
+
+.lele{
+    font-family: 'Young-serif';
+    color: #F8F1EE;
+    margin-top: 65px;
+    margin-bottom: 70px;
+    font-size: 30px;
+}
+
+.dois{
+    font-family: 'Poppins-regular';
+    font-size: 25px;
+    color: #F8F1EE;
+    margin-top: 65px;
+    margin-bottom: 70px;
+    margin-left: 740px;
+}
+/* fim footer */
