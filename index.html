@@ -162,7 +162,7 @@
                 .then(resposta => resposta.json())
                 .then(texto => {
                     document.getElementById('buscar').placeholder = texto.buscar;
-                    document.getElementById('botaoLogin').innerText = texto.botaoLogin;
+                    document.getElementById('loginButton').innerText = texto.botaoLogin;
                     
                     document.querySelector('#descubra').textContent = texto.descubra;
                     document.querySelector('#sobre').textContent = texto.sobre;
